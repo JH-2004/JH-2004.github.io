@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+
+    <div id="chart" style="width:600px;height:400px;"></div>
+    <div id="chart2" style="width:600px;height:400px;"></div>
+
+    <!--[if lt IE 9]><script src="js/excanvas.min.js"></script><![endif]-->
+    <script src="js/flotr2.min.js"></script>
+    <script>
+
+window.onload = function () {
+
+strength = [[0,100],[1,80],[2,70],[3,60],[4,50],[5,40],[6,15]];
+var exercise = [
+    [0, "Squat"],
+    [1, "Calf Raise"],
+    [2, "Shrug"],
+    [3, "Incline Bench"],
+    [4, "Row"],
+    [5, "Reverse Fly"],
+    [6, "Lateral Raise"],
+];
+Flotr.draw(document.getElementById("chart"),[strength], {
+  title: "Jeremy Strength Level",
+  colors: ["#2AAA8A"],
+    bars: {
+        show: true,
+        barWidth: 0.7,
+        shadowSize: 0,
+        fillOpacity: 1,
+        lineWidth: 0,
+    },
+    yaxis: {
+        min: 0,
+        tickDecimals: 0,
+    },
+    xaxis: {
+        ticks: exercise,
+    },
+    grid: {
+        horizontalLines: false,
+        verticalLines: false,
+    }
+});
+
+strength = [[0,100],[1,80],[2,70],[3,60],[4,50],[5,40],[6,15]];
+var exercise = [
+    [0, "Squat"],
+    [1, "Calf Raise"],
+    [2, "Shrug"],
+    [3, "Incline Bench"],
+    [4, "Row"],
+    [5, "Reverse Fly"],
+    [6, "Lateral Raise"],
+];
+Flotr.draw(document.getElementById("chart2"),[strength], {
+  title: "Braulio Strength Level",
+  colors: ["#2AAA8A"],
+    bars: {
+        show: true,
+        barWidth: 0.7,
+        shadowSize: 0,
+        fillOpacity: 1,
+        lineWidth: 0,
+    },
+    yaxis: {
+        min: 0,
+        tickDecimals: 0,
+    },
+    xaxis: {
+        ticks: exercise,
+    },
+    grid: {
+        horizontalLines: false,
+        verticalLines: false,
+    }
+});
+};
+
+    </script>
+    <h1>Todo List</h1>
+    <ul>
+      <li>Test our strength with dumbbells</li>
+      <li>Create a task list of things to improve our strength</li>
+    </ul>
+  </body>
+</html>
